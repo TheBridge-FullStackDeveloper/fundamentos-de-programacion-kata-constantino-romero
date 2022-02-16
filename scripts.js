@@ -56,7 +56,7 @@ function imprimeUnaRespuesta(respuesta) {
 }
 
 function imprimeLabel(respuesta) {
-  // Put your code here
+  return '<label for = 'pregunta.respuesta.id(respuesta)'>' pregunta.respuestas.label(respuesta)'</label>'
 }
 
 function imprimeInput(respuesta) {
