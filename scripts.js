@@ -48,7 +48,7 @@ function imprimeTitulo(pregunta) {
 }
 
 function imprimeTodasLasRespuestas(pregunta) {
-  // Put your code here
+  imprimeUnaRespuesta(pregunta)
 }
 
 function imprimeUnaRespuesta(respuesta) {
