@@ -60,7 +60,7 @@ function imprimeLabel(respuesta) {
 }
 
 function imprimeInput(respuesta) {
-  // Put your code here
+  return '<input type=radio id =' pregunta.respuestas.id(respuesta) ' name =' pregunta.respuestas.name(respuesta) ' value = ' pregunta.respuestas.value '>'
 }
 
 document.getElementById("contenedorPreguntas").innerHTML = imprimePregunta(pregunta);
