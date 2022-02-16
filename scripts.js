@@ -44,7 +44,7 @@ function imprimePregunta(pregunta) {
 }
 
 function imprimeTitulo(pregunta) {
-  return '<p>'pregunta.titulo'</p>'
+  return '<p>' + pregunta.titulo + '</p>'
 }
 
 function imprimeTodasLasRespuestas(pregunta) {
@@ -52,15 +52,15 @@ function imprimeTodasLasRespuestas(pregunta) {
 }
 
 function imprimeUnaRespuesta(respuesta) {
-  // Put your code here
+  
 }
 
 function imprimeLabel(respuesta) {
-  return '<label for = 'pregunta.respuesta.id(respuesta)'>' pregunta.respuestas.label(respuesta)'</label>'
+  return '<label for = ' + pregunta.respuesta.id(respuesta) + '>' + pregunta.respuestas.label(respuesta) + '</label>'
 }
 
 function imprimeInput(respuesta) {
-  return '<input type=radio id =' pregunta.respuestas.id(respuesta) ' name =' pregunta.respuestas.name(respuesta) ' value = ' pregunta.respuestas.value '>'
+  return '<input type=radio id =' + pregunta.respuestas.id(respuesta) + ' name =' + pregunta.respuestas.name(respuesta) + ' value = ' + pregunta.respuestas.value + '>'
 }
 
 document.getElementById("contenedorPreguntas").innerHTML = imprimePregunta(pregunta);
