@@ -35,32 +35,41 @@ const pregunta = {
 }
 
 function imprimePregunta(pregunta) {
-  const newHTML = "";
+
+  let newHTML = "";
 
   newHTML += imprimeTitulo(pregunta);
   newHTML += imprimeTodasLasRespuestas(pregunta);
 
   return newHTML;
+  
 }
 
 function imprimeTitulo(pregunta) {
-  // Put your code here
+  return '<p>'+pregunta.titulo+'</p>';
 }
 
 function imprimeTodasLasRespuestas(pregunta) {
-  // Put your code here
+  return imprimeUnaRespuesta(pregunta)
+
 }
 
 function imprimeUnaRespuesta(respuesta) {
-  // Put your code here
+  let totalRespuestas = respuesta.respuestas.length;
+  let newHTML = "";
+  for(let i =0; i<totalRespuestas; i++){
+    newHTML += imprimeLabel(respuesta.respuestas[i]);
+    newHTML += imprimeInput(respuesta.respuestas[i]);
+  }
+  return newHTML;
 }
 
-function imprimeLabel(respuesta) {
-  // Put your code here
+function imprimeLabel(respuesta) { 
+  return '<label for="'+respuesta.id+'">'+respuesta.label+'</label><br>'
 }
 
 function imprimeInput(respuesta) {
-  // Put your code here
+  return '<input id="'+respuesta.id+'" name="'+respuesta.name+'" type="radio" value="'+respuesta.value+'"><br>'
 }
 
 document.getElementById("contenedorPreguntas").innerHTML = imprimePregunta(pregunta);
