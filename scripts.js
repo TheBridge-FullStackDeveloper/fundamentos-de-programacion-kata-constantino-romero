@@ -52,7 +52,7 @@ function imprimeTodasLasRespuestas(pregunta) {
 }
 
 function imprimeUnaRespuesta(respuesta) {
-  
+  return imprimeLabel(respuesta) + imprimeInput(respuesta)
 }
 
 function imprimeLabel(respuesta) {
@@ -60,7 +60,7 @@ function imprimeLabel(respuesta) {
 }
 
 function imprimeInput(respuesta) {
-  return '<input type=radio id =' + pregunta.respuestas.id(respuesta) + ' name =' + pregunta.respuestas.name(respuesta) + ' value = ' + pregunta.respuestas.value + '>'
+  return '<input type=radio id =' + pregunta.respuestas.id(respuesta) + ' name =' + pregunta.respuestas.name(respuesta) + ' value = ' + pregunta.respuestas.value(respuesta) + '>'
 }
 
 document.getElementById("contenedorPreguntas").innerHTML = imprimePregunta(pregunta);
