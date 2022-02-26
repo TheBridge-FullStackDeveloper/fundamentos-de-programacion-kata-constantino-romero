@@ -52,15 +52,25 @@ function imprimeTodasLasRespuestas(pregunta) {
 }
 
 function imprimeUnaRespuesta(respuesta) {
-  return imprimeLabel(respuesta) + imprimeInput(respuesta)
+  
+  
+  let newHTML = ''
+  for (let i = 0; i < respuesta.respuestas.length; i++) {
+
+    newHTML += imprimeLabel(respuesta.respuestas[i])
+    newHTML += imprimeInput(respuesta.respuestas[i])
+
+  }
+
+  return newHTML
 }
 
 function imprimeLabel(respuesta) {
-  return '<label for = "' + pregunta.respuesta.id(respuesta) + '">' + pregunta.respuestas.label(respuesta) + '</label>'
+  return '<label for = "' + respuesta.id + '">' + respuesta.label + '</label>'
 }
 
 function imprimeInput(respuesta) {
-  return '<input type=radio id ="' + pregunta.respuestas.id(respuesta) + '" name ="' + pregunta.respuestas.name(respuesta) + '" value = "' + pregunta.respuestas.value(respuesta) + '">'
+  return '<input type="radio" id ="' + respuesta.id + '" name ="' + respuesta.name + '" value = "' + respuesta.value + '">'
 }
 
 document.getElementById("contenedorPreguntas").innerHTML = imprimePregunta(pregunta);
